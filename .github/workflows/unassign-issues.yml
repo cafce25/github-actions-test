@@ -14,7 +14,7 @@ jobs:
         id: unassign_issues
         with:
           token: ${{secrets.GITHUB_TOKEN}}
-          warning_inactive_in_hours: 336
-          unassign_inactive_in_hours: 408
+          warning_inactive_in_hours: 0
+          unassign_inactive_in_hours: 1
           offisce_hours: 'n/a'
           warning_inactive_message: "just comment if still working on it"
