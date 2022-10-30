@@ -1,0 +1,20 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  unassign_issues:
+    runs-on: ubuntu-latest
+    name: Unassign_ issues
+    steps:
+      - uses: actions/checkout@main
+        with:
+          submodules: 'true'
+      - name: Unassign issues
+        uses: ./unassign_issues
+        id: unassign_issues
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
+          warning_inactive_in_hours: 336
+          unassign_inactive_in_hours: 408
+          offisce_hours: 'n/a'
+          warning_inactive_message: "just comment if still working on it"
