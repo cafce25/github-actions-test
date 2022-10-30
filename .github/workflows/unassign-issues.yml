@@ -4,13 +4,13 @@ on:
 jobs:
   unassign_issues:
     runs-on: ubuntu-latest
-    name: Unassign_ issues
+    name: Unassign issues
     steps:
       - uses: actions/checkout@main
         with:
           submodules: 'true'
       - name: Unassign issues
-        uses: ./unassign_issues
+        uses: ./unassign-issues
         id: unassign_issues
         with:
           token: ${{secrets.GITHUB_TOKEN}}
