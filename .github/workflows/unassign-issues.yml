@@ -16,7 +16,7 @@ jobs:
           token: ${{secrets.GITHUB_TOKEN}}
           warning_inactive_in_hours: 0
           unassign_inactive_in_hours: 1
-          office_hours: 'n/a'
+          contact_message: 'visit the #casa channel in slack during ${officeHours}. Link: https://rubyforgood.herokuapp.com/'
           warning_inactive_message: "just comment if still working on it"
       - name: Print the unassigned issues
         run: echo "Unassigned issues = ${{steps.unassign_issues.outputs.unassigned_issues}}"
